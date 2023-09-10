@@ -1,0 +1,16 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image:url(background.gif);
+    overflow-y:hidden;
+}
+
+*{
+    user-select: none;
+}
+
+select{
+    width:70px;
+}

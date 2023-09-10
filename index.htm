@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="calc-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-white" Align="center">Simple Calculator</h3>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-3">
+                        <form>
+                            <label class="form-label text-white" for="num1">Number 1:</label>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="num1" class="form-control form-floating" type="number">
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-3">
+                        <label class="text-white" for="num2">Number 2:</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="num2" class="form-control form-floating" type="number">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 d-flex justify-content-between">
+                        <select style="width:60px;" id="operators">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                        <button onclick="calc()" class="btn btn-primary" type="button">=</button>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="result" class="form-control form-floating" type="number">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Script-->
+    <script>
+        function calc() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            var opr = document.getElementById('operators').value;
+
+            switch(opr) {
+                case "+":
+                    document.getElementById('result').value = num1 + num2;
+                    break;
+                
+                case "-":
+                    document.getElementById('result').value = num1 - num2;
+                    break;
+
+                case "*":
+                    document.getElementById('result').value = num1 * num2;
+                    break;
+
+                case "/":
+                    document.getElementById('result').value = num1 / num2;
+            }
+            
+        }
+    </script>
+</body>
+</html>
