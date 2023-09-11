@@ -5,3 +5,7 @@ Release Date: 10 September, 2023 <br>
 
 # Source code
 **Not available yet.**
+
+# Feedbacks and suggestions
+
+Email: thurawaizin28@gmail.com
